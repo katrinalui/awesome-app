@@ -5,7 +5,7 @@ const DogReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_DOG:
-      return { url: action.dog };
+      return { url: action.dog.message };
     default:
       return state;
   }

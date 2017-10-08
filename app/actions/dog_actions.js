@@ -8,5 +8,5 @@ export const receiveDog = dog => ({
 });
 
 export const requestDog = breed => dispatch => (
-  getDogImage(breed).then(dog => dispatch(receiveDog(dog.message)))
+  getDogImage(breed).then(res => dispatch(receiveDog(JSON.parse(res._bodyText))))
 );
